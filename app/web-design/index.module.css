@@ -1,0 +1,317 @@
+.main {
+  height: auto;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 11.458333% 100px 11.458333%; /* 165px/1440 */
+  position: relative;
+}
+.pattern1 {
+  position: absolute;
+  top: 126px;
+  left: 0;
+}
+
+/* HERO SECTION */
+.wrap_hero {
+  width: 100%;
+  height: 252px;
+  margin-bottom: 160px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: url("../../public/assets/web-design/desktop/bg-pattern-intro-web.svg")
+    no-repeat center right;
+  background-blend-mode: multiply;
+  background-color: #e7816b;
+}
+.hero_title {
+  color: #fff;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px; /* 100% */
+}
+.hero_paragraph {
+  width: 435px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+/* WORKS SECTION */
+.wrap_works {
+  height: auto;
+  width: 100%;
+  margin-bottom: 160px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 30px;
+  justify-content: center;
+}
+.web_work {
+  flex-basis: 350px;
+  height: 478px;
+  border-radius: 15px;
+  background: #fdf3f0;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+.web_work:hover {
+  background: #e7816b;
+}
+.web_work:hover .work_title {
+  color: #fff;
+}
+.web_work:hover .work_detail {
+  color: #fff;
+}
+.wrap_work_img {
+  height: 320px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.wrap_work_text {
+  height: 158px;
+  width: 100%;
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.work_title {
+  color: #e7816b;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 130% */
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  transition: color 0.5s ease;
+}
+.work_detail {
+  width: 286px;
+  color: #333136;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  transition: color 0.5s ease;
+}
+
+/* DESIGN SECTION */
+
+.wrap_design {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 308px;
+  gap: 30px;
+}
+.app,
+.graphic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  gap: 24px;
+  position: relative;
+}
+.app::after,
+.graphic::after {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  content: "";
+  border-radius: 15px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #e7816b;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.app {
+  background: url("../../public/assets/home/desktop/image-app-design.jpg")
+    no-repeat center/cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.graphic {
+  background: url("../../public/assets/home/desktop/image-graphic-design.jpg")
+    no-repeat center/cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.app:hover::after,
+.web:hover::after,
+.graphic:hover::after {
+  opacity: 0.6;
+}
+.design_title {
+  color: #fff;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px; /* 120% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 4;
+}
+.design_link {
+  display: flex;
+  flex-direction: row;
+  gap: 21px;
+  align-items: center;
+  color: #fff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 4;
+}
+.arrow_right {
+  height: 8px;
+  width: 4px;
+}
+
+@media screen and (max-width: 968px) {
+  .main {
+    padding: 0 5.078125% 100px 5.078125%; /* 39px/768 */
+  }
+  .pattern1 {
+    display: none;
+  }
+  /* HERO SECTION */
+  .wrap_hero {
+    margin-bottom: 120px;
+  }
+  /* WORKS SECTION */
+  .wrap_works {
+    margin-bottom: 120px;
+    gap: 32px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrap_work_img {
+    border-radius: 15px 0 0 15px;
+  }
+  .web_work {
+    width: 689px;
+    height: 310px;
+    display: flex;
+    flex: 1 1;
+  }
+  .wrap_work_text {
+    height: 310px;
+  }
+  /* DESIGN SECTION */
+
+  .wrap_design {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 200px);
+    gap: 24px;
+  }
+  .app {
+    background: url("../../public/assets/home/tablet/image-app-design.jpg")
+      no-repeat center/cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .graphic {
+    background: url("../../public/assets/home/tablet/image-graphic-design.jpg")
+      no-repeat center/cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 0;
+  }
+  /* HERO SECTION */
+  .wrap_hero {
+    border-radius: 0;
+    height: 320px;
+    margin-bottom: 96px;
+    background: url("../../public/assets/web-design/desktop/bg-pattern-intro-web.svg")
+      no-repeat top right;
+    background-blend-mode: multiply;
+    background-color: #e7816b;
+  }
+  .hero_title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 36px; /* 112.5% */
+  }
+  .hero_paragraph {
+    max-width: 327px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px; /* 166.667% */
+  }
+  /* WORKS SECTION */
+  .wrap_works {
+    margin-bottom: 96px;
+    gap: 40px;
+  }
+  .web_work {
+    width: 327px;
+    height: 478px;
+    flex-direction: column;
+  }
+  .wrap_work_img {
+    height: 320px;
+    border-radius: 15px 15px 0 0;
+  }
+  .wrap_work_text {
+    height: 158px;
+  }
+
+  /* DESIGN SECTION */
+
+  .wrap_design {
+    padding: 0 6.4%; /* 24px/375 */
+    grid-template-rows: repeat(2, 250px);
+  }
+  .app,
+  .graphic {
+    gap: 12px;
+  }
+  .app {
+    background: url("../../public/assets/home/mobile/image-app-design.jpg")
+      no-repeat center/cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .graphic {
+    background: url("../../public/assets/home/mobile/image-graphic-design.jpg")
+      no-repeat center/cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .design_title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px; /* 128.571% */
+    letter-spacing: 1.4px;
+  }
+}

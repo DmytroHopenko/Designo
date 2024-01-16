@@ -1,0 +1,167 @@
+.main {
+  height: auto;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 11.458333% 100px 11.458333%; /* 165px/1440 */
+  position: relative;
+}
+
+/* LOCATION SECTION */
+
+.wrap_locations {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+}
+.location {
+  height: 326px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.location:nth-child(2) {
+  flex-direction: row-reverse;
+}
+.wrap_map {
+  min-width: 350px;
+  height: 326px;
+  border-radius: 15px;
+}
+.canada {
+  background: url("../../public/assets/locations/desktop/image-map-canada.png")
+    no-repeat center/cover;
+}
+.australia {
+  background: url("../../public/assets/locations/desktop/image-map-australia.png")
+    no-repeat left/cover;
+}
+.uk {
+  background: url("../../public/assets/locations/desktop/image-map-united-kingdom.png")
+    no-repeat center/cover;
+}
+
+.wrap_information {
+  flex: auto;
+  background: url("../../public/assets/shared/desktop/bg-pattern-two-circles.svg")
+    no-repeat center bottom;
+  background-blend-mode: multiply;
+  background-color: #fdf3f0;
+  border-radius: 15px;
+  padding: 0 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+.location_title {
+  color: #e7816b;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px; /* 120% */
+}
+.wrap_detail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.location_text {
+  flex-basis: 255px;
+  color: #333136;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+.bold_text {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 968px) {
+  .main {
+    padding: 0 5.078125% 100px 5.078125%; /* 39px/768 */
+  }
+
+  /* LOCATION SECTION */
+
+  .wrap_locations {
+    gap: 120px;
+  }
+  .location,
+  .location:nth-child(2) {
+    height: auto;
+    flex-direction: column-reverse;
+  }
+  .wrap_map {
+    height: 326px;
+    width: 100%;
+  }
+  .canada {
+    background: url("../../public/assets/locations/tablet/image-map-canada.png")
+      no-repeat center/cover;
+  }
+  .australia {
+    background: url("../../public/assets/locations/tablet/image-map-australia.png")
+      no-repeat center/cover;
+  }
+  .uk {
+    background: url("../../public/assets/locations/tablet/image-map-uk.png")
+      no-repeat center/cover;
+  }
+  .wrap_information {
+    height: 326px;
+    padding: 0 74px 0 75px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 0;
+  }
+  .wrap_locations {
+    gap: 30px;
+  }
+  .location {
+    gap: 0;
+  }
+  .wrap_map {
+    height: 320px;
+    width: 100%;
+    border-radius: 0;
+  }
+  .wrap_information {
+    height: 394px;
+    border-radius: 0;
+    background: url("../../public/assets/shared/desktop/bg-pattern-three-circles.svg")
+      no-repeat center;
+    background-blend-mode: multiply;
+    background-color: #fdf3f0;
+    padding: 0;
+    align-items: center;
+  }
+  .wrap_detail {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  .location_title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; /* 112.5% */
+  }
+  .location_text {
+    max-width: 327px;
+    flex-basis: auto;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+  }
+}
